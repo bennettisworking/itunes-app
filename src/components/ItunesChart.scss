@@ -1,12 +1,24 @@
+@import '../variables';
+
 /* Bootstrap overrides */
 
 .btn {
-	font-family: 'Rubik', sans-serif;
+	font-family: $sans-font;
 	font-weight: 400;
 }
+
+.btn-success {
+	background-color: transparent;
+}
+
+/*-------------*/
+
 .itunesChart {
-	font-family: 'Rubik', sans-serif;
-	color: #222;
+	font-family: $sans-font;
+	color: $text-color;
+}
+.itunesChart {
+
 }
 .itunesChart__entry {
 	height: 140px;
@@ -26,7 +38,7 @@
 	background-size: cover;
 }
 .itunesChart__entry__text {
-	font-family: 'Domine', serif;
+	font-family: $serif-font;
 	font-size: 13px;
 	text-align: left;
 	line-height: 1.3;
@@ -35,7 +47,7 @@
 	font-size: 15px;
 }
 .itunesChart__entry__title {
-	font-family: 'Rubik', sans-serif;
+	font-family: $sans-font;
 	font-weight: bold;
 	font-size: 15px;
 }
@@ -58,4 +70,6 @@
 .itunesChart__entry__buy{
 	position: absolute;
 	bottom: 4px;
+	border: 1px solid #666;
+	color: #666;
 }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './ItunesChart.css';
+import './ItunesChart.scss';
 import Hero from './Hero';
 
 class ItunesChart extends Component {

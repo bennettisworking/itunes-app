@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
-import './Hero.css';
+import './Hero.scss';
 
 class Hero extends Component {
 
+state = {
+    coverTop: -1800,
+    textOpacity: 0
+  }
+componentDidMount(){
+	this.heroAnimate();
+}
 
 makeSlide(){
 	let bg = '';
@@ -14,10 +21,11 @@ makeSlide(){
 		<div className="hero">
 			<div className="hero__inset" style ={{ backgroundImage: "url('" + bg + "')" }}></div>
 			<div className="hero__content row">
-				<div className="hero__album-cover-col col-lg-5">
-					<div className="hero__album-cover" style ={{ backgroundImage: "url('" + bg + "')" }}></div>
+				<div className="hero__album-cover-col col-lg-5 col-md-5">
+					<div className="hero__album-cover" style ={{ backgroundImage: "url('" + bg + "')", top: this.state.coverTop + "px" }}></div>
 				</div>
-				<div className="hero__text col-lg-7">
+				<div className="hero__text col-lg-7 col-md-7" style={{opacity: this.state.textOpacity}}>
+					<div className="hero__pick">FEATURED</div><br/>
 					<div className="hero__title">{album['im:name'].label}</div><br/>
 					<div className="hero__artist">{album['im:artist'].label}</div>
 					<button className="hero__buynow btn btn-success btn-sm">Buy Now</button>
@@ -27,6 +35,19 @@ makeSlide(){
 		)
 	}
 }	
+
+heroAnimate(){
+	setTimeout(
+    function() {
+        this.setState({
+        	coverTop: 0,
+        	textOpacity: 1
+        });
+    }
+    .bind(this),
+    500
+);
+}
 
 render(){
 	return(

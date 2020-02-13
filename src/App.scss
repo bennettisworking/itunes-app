@@ -1,3 +1,5 @@
+@import './variables';
+
 .App {
   text-align: center;
 }
@@ -38,7 +40,7 @@
 }
 
 .page-header {
-  font-family: 'Rubik', sans-serif;
+  font-family: $sans-font;
   background-color: rgb(12, 30, 43);
   color: #eee;
   padding: 15px 0;
