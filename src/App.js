@@ -9,7 +9,9 @@ function App() {
       <div className="page-header">
         <h1 className="page-header__heading">PayCertify Music</h1>
       </div>
-     <ItunesChart/>
+      <ItunesChart/>
+      <footer className="footer">
+      </footer>
     </div>
   );
 }

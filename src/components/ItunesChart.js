@@ -4,8 +4,10 @@ import Hero from './Hero';
 
 class ItunesChart extends Component {
   state = {
-    albums: [],
-    hero_albums: []
+    albums: [], // albums used in display, including filtered by searches, etc.
+    allAlbums: [], // all albums from api
+    hero_albums: [], // select albums to appear in hero
+    searchInput: ''
   }
 
   componentDidMount(){
@@ -16,7 +18,10 @@ class ItunesChart extends Component {
     fetch('https://itunes.apple.com/us/rss/topalbums/limit=100/json')
       .then(response => response.json())
       .then(data => {
-        this.setState({ albums: data.feed.entry });
+        this.setState({ 
+        	albums: data.feed.entry,
+        	allAlbums: data.feed.entry
+        });
         this.setHero();
       })
   }
@@ -41,7 +46,20 @@ class ItunesChart extends Component {
   	return displaylist;
   }
 
-  setHero(){
+  searchAlbums(e) {
+  	this.setState({searchInput: e.target.value});
+  	let filteredAlbums = this.state.allAlbums;
+  	filteredAlbums = filteredAlbums.filter((album) => {
+  		let albumArtist = album['im:name'].label.toLowerCase() + album['im:artist'].label.toLowerCase()
+  		return albumArtist.indexOf(
+        e.target.value.toLowerCase()) !== -1
+    })
+    this.setState({
+      albums: filteredAlbums
+    })
+  }
+
+  setHero() {
   	let ids = [];
   	for(let a=0; a<1; a++){
   		ids.push(this.state.albums[Math.floor(Math.random()*100)]); //change to count because not always 100 records
@@ -51,10 +69,21 @@ class ItunesChart extends Component {
 
   render(){
   	let albums = this.state.hero_albums;
+  	let searchText = this.state.searchInput;
   	return(
   		<div>
   		<Hero albums={albums}/>
   		<div className="itunesChart container">
+  		<div className="itunesChart__header row">
+  			<div className="col-lg-3"></div>
+  			<div className="col-lg-6">
+  				<h4 className="itunesChart__title">The iTunes Hot 100 Albums</h4>
+  			</div>
+  			<div className="col-lg-3 text-right">
+  				<input className="itunesChart__search" type="text" placeholder="Search artists and titles"
+  				onChange={this.searchAlbums.bind(this)} value={searchText}/>
+  			</div>
+  		</div>
   		<div className="row">
   		{this.displayChart()}
   		</div>

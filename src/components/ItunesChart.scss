@@ -27,6 +27,11 @@
 	transition: .4s;
 	background-color: #fff;
 }
+.itunesChart__entry--top, .itunesChart__entry:nth-child(-n+3) {
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 220px;
+}
 .itunesChart__entry--top, .itunesChart__entry:first-child {
     flex: 0 0 100%;
     max-width: 100%;
@@ -67,9 +72,35 @@
 	font-weight: bold;
 	font-size: 14px;
 }
-.itunesChart__entry__buy{
+.itunesChart__entry__buy {
 	position: absolute;
 	bottom: 4px;
 	border: 1px solid #666;
 	color: #666;
+}
+.itunesChart__header {
+	background-color: transparent;//$accent-dark;
+	padding: 2px 0 5px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid $accent-dark;
+}
+.itunesChart__title {
+	color: $accent-dark;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 7px 0 0;
+}
+.itunesChart__search {
+	font-size: 11px;
+	font-family: $sans-font;
+	background-color: transparent;
+	color: $accent-dark;
+	border: 1px solid #aaa;
+	box-shadow: none;
+	width: 75%;
+	padding: 2px 4px;
+	/*position: absolute;
+	top: 80px;
+	right: 50px;
+	z-index: 10;*/
 }

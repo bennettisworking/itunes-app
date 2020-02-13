@@ -16,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $accent-dark;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,4 +50,9 @@
   margin: 0;
   font-size: 22px;
   font-weight: bold;
+}
+
+.footer {
+  height: 400px;
+  background: $accent-dark;
 }
