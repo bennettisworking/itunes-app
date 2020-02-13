@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.page-header {
+  font-family: 'Rubik', sans-serif;
+  background-color: rgb(12, 30, 43);
+  color: #eee;
+  padding: 15px 0;
+}
+
+.page-header__heading {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}

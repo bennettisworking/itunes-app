@@ -6,10 +6,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-    <div class="page-header">
-  <h1>Albums Top 100</h1>
-</div>
-    <div class="jumbotron"></div>
+      <div className="page-header">
+        <h1 className="page-header__heading">PayCertify Music</h1>
+      </div>
      <ItunesChart/>
     </div>
   );
