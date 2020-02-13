@@ -1,0 +1,41 @@
+.itunesChart {
+	font-family: 'Rubik', sans-serif;
+	color: #222;
+}
+.itunesChart__entry {
+	height: 140px;
+	position: relative;
+	margin-bottom: 10px;
+}
+.itunesChart__entry--top, .itunesChart__entry:first-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 220px;
+}
+.itunesChart__entry__image {
+	height: 100%;
+	background-size: cover;
+}
+.itunesChart__entry__text {
+	text-align: left;
+	line-height: 1.3;
+}
+.itunesChart__entry__title {
+	font-weight: bold;
+	font-size: 17px;
+}
+.itunesChart__entry__bullet {
+	position: absolute;
+	top: 4px;
+	left: 18px;
+	z-index: 1;
+	color: #eee;
+	width: 18px;
+	background-color: rgba(0, 0, 0, .6);
+	font-weight: bold;
+	font-size: 14px;
+}
+.itunesChart__entry__buy{
+	position: absolute;
+	bottom: 4px;
+}
