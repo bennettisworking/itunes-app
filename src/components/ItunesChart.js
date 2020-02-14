@@ -32,13 +32,16 @@ class ItunesChart extends Component {
   	albums.forEach((album, index) => {
   		let imgurl = album['im:image'][2];
   		displaylist.push(
-  			<div className="itunesChart__entry col-lg-4 col-md-6 row ml-0 mr-0">
-  			<div className="itunesChart__entry__bullet">{index + 1}</div>
-  			<div className="itunesChart__entry__image col-lg-5 col-md-5" style ={{ backgroundImage: "url('"+imgurl.label+"')" }}></div>
-  			<div className="itunesChart__entry__text col-lg-7 col-md-7">
+  			<div className="itunesChart__entry col-6 col-lg-4 col-md-6 col-sm-6 col-xs-6 row ml-0 mr-0">
+  			<div className="itunesChart__entry__image-col col-6 col-lg-5 col-md-5">
+  				<div className="itunesChart__entry__image" style ={{ backgroundImage: "url('"+imgurl.label+"')" }}>
+  					<div className="itunesChart__entry__bullet">{index + 1}</div>
+  				</div>
+  			</div>
+  			<div className="itunesChart__entry__text col-6 col-lg-7 col-md-7">
   			<h4 className="itunesChart__entry__title">{album['im:name'].label}</h4>
   			<div>{album['im:artist'].label}</div>
-  			<button className="itunesChart__entry__buy btn btn-success btn-sm" >Buy Now</button>
+  			<button className="itunesChart__entry__buy btn btn-success btn-tny" >Buy Now</button>
   			</div>
   			</div>
   			);
@@ -75,11 +78,11 @@ class ItunesChart extends Component {
   		<Hero albums={albums}/>
   		<div className="itunesChart container">
   		<div className="itunesChart__header row">
-  			<div className="col-lg-3"></div>
-  			<div className="col-lg-6">
+  			<div className="col-0 col-sm-0 col-md-4 col-lg-3"></div>
+  			<div className="col-12 col-sm-6 col-md-4 col-lg-6 text-sm-left text-md-center">
   				<h4 className="itunesChart__title">The iTunes Hot 100 Albums</h4>
   			</div>
-  			<div className="col-lg-3 text-right">
+  			<div className="col-12 col-sm-6 col-md-4 col-lg-3 text-center text-sm-right text-md-right">
   				<input className="itunesChart__search" type="text" placeholder="Search artists and titles"
   				onChange={this.searchAlbums.bind(this)} value={searchText}/>
   			</div>

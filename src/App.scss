@@ -1,5 +1,29 @@
 @import './variables';
 
+/* Bootstrap overrides/extensions */
+
+.btn {
+  font-family: $sans-font;
+  font-weight: 400;
+}
+
+.btn-success {
+  background-color: transparent;
+  border: 1px solid #aaa;
+}
+
+.btn-success:hover {
+  background-color: rgba(0, 0, 0, .3);
+  border: 1px solid #aaa;
+}
+
+.btn-tny {
+  padding: 3px 5px 2px;
+  font-size: 10px;
+}
+
+/*-------------*/
+
 .App {
   text-align: center;
 }
