@@ -1,110 +1,134 @@
 @import '../variables';
 
 .itunesChart {
-	font-family: $sans-font;
-	color: $text-color;
+    font-family: $sans-font;
+    color: $text-color;
 }
+
 .itunesChart__entry {
-	height: 140px;
-	position: relative;
-	margin-bottom: 25px;
-	transition: .4s;
-	background-color: #fff;
-	padding: 5px;
+    height: 140px;
+    position: relative;
+    margin-bottom: 25px;
+    transition: .4s;
+    background-color: #fff;
+    padding: 5px;
 }
+
 @media only screen and (min-width: 992px) {
-	.itunesChart__entry--top, .itunesChart__entry:nth-child(-n+3) {
-	    flex: 0 0 50%;
-	    max-width: 50%;
-	    height: 220px;
-	}
+
+    .itunesChart__entry--top,
+    .itunesChart__entry:nth-child(-n+3) {
+        /*flex: 0 0 50%;
+        max-width: 50%;
+        height: 220px;*/
+    }
 }
-.itunesChart__entry--top, .itunesChart__entry:first-child {
+
+.itunesChart__entry--top,
+.itunesChart__entry:first-child {
     flex: 0 0 100%;
     max-width: 100%;
     height: 220px;
 }
+
 .itunesChart__entry__image {
-	border-radius: 4px;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	width: 95%
+    border-radius: 4px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 95%
 }
+
 .itunesChart__entry__image:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+    content: "";
+    display: block;
+    padding-bottom: 100%;
 }
+
 .itunesChart__entry:first-child .itunesChart__entry__image {
-	max-height: 210px;
-	background-position: center center;
+    max-height: 210px;
+    background-position: center center;
 }
+
 .itunesChart__entry__image-col {
-	padding: 0;
+    padding: 0;
 }
+
 .itunesChart__entry__text {
-	font-family: $serif-font;
-	font-size: 13px;
-	text-align: left;
-	line-height: 1.3;
-	padding: 0 3px 0 10px;
+    font-family: $serif-font;
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.3;
+    padding: 0 3px 0 10px;
 }
+
 .itunesChart__entry__title {
-	font-family: $sans-font;
-	font-weight: bold;
-	font-size: 15px;
+    font-family: $sans-font;
+    font-weight: bold;
+    font-size: 15px;
 }
+
 @media only screen and (min-width: 992px) {
-	.itunesChart__entry:nth-child(-n+3) .itunesChart__entry__text {
-		font-size: 15px;
-	}
-	.itunesChart__entry:nth-child(-n+3) .itunesChart__entry__title {
-		font-size: 20px;
-	}
+    .itunesChart__entry:first-child .itunesChart__entry__text {
+        font-size: 15px;
+    }
+
+    .itunesChart__entry:first-child .itunesChart__entry__title {
+        font-size: 20px;
+    }
 }
+
 @media only screen and (max-width: 576px) {
-	.itunesChart__entry__title {
-		font-size: 13px;
-	}
+    .itunesChart__entry__title {
+        font-size: 13px;
+    }
 }
+
 .itunesChart__entry__bullet {
-	position: absolute;
-	border-radius: 3px;
-	top: 4px;
-	left: 4px;
-	z-index: 1;
-	color: #eee;
-	min-width: 18px;
-	padding: 0 4px;
-	background-color: rgba(0, 0, 0, .6);
-	font-weight: bold;
-	font-size: 14px;
+    position: absolute;
+    border-radius: 3px;
+    top: 4px;
+    left: 4px;
+    z-index: 1;
+    color: #eee;
+    min-width: 18px;
+    padding: 0 4px;
+    background-color: rgba(0, 0, 0, .6);
+    font-weight: bold;
+    font-size: 14px;
 }
+
 .itunesChart__entry__buy {
-	position: absolute;
-	bottom: 4px;
-	border: 1px solid #666;
-	color: #666;
+    position: absolute;
+    bottom: 4px;
+    border: 1px solid #666;
+    color: #666;
 }
+
+.itunesChart__entry__buy:hover {
+	background-color: rgba(0, 0, 0, .3);
+}
+
 .itunesChart__header {
-	background-color: transparent;//$accent-dark;
-	padding: 2px 0 5px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid $accent-dark;
+    background-color: transparent; //$accent-dark;
+    padding: 2px 0 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $accent-dark;
 }
+
 .itunesChart__title {
-	color: $accent-dark;
-	font-size: 14px;
-	font-weight: bold;
-	margin: 7px 0 0;
+    color: $accent-dark;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 7px 0 0;
 }
+
 .itunesChart__search {
-	font-size: 11px;
-	font-family: $sans-font;
-	background-color: transparent;
-	color: $accent-dark;
-	border: 1px solid #aaa;
-	box-shadow: none;
-	width: 75%;
-	padding: 2px 4px;
+    font-size: 11px;
+    font-family: $sans-font;
+    background-color: transparent;
+    color: $accent-dark;
+    border: 1px solid #aaa;
+    box-shadow: none;
+    width: 75%;
+    padding: 2px 4px;
 }

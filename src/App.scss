@@ -3,80 +3,84 @@
 /* Bootstrap overrides/extensions */
 
 .btn {
-  font-family: $sans-font;
-  font-weight: 400;
+    font-family: $sans-font;
+    font-weight: 400;
 }
 
 .btn-success {
-  background-color: transparent;
-  border: 1px solid #aaa;
+    background-color: transparent;
+    border: 1px solid #aaa;
 }
 
-.btn-success:hover {
-  background-color: rgba(0, 0, 0, .3);
-  border: 1px solid #aaa;
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+    background-color: rgba(0, 0, 0, .3);
+    border: 1px solid #aaa;
+    outline: none;
+    box-shadow: none;
 }
 
 .btn-tny {
-  padding: 3px 5px 2px;
-  font-size: 10px;
+    padding: 3px 5px 2px;
+    font-size: 10px;
 }
 
 /*-------------*/
 
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: $accent-dark;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: $accent-dark;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .page-header {
-  font-family: $sans-font;
-  background-color: rgb(12, 30, 43);
-  color: #eee;
-  padding: 15px 0;
+    font-family: $sans-font;
+    background-color: rgb(12, 30, 43);
+    color: #eee;
+    padding: 15px 0;
 }
 
 .page-header__heading {
-  margin: 0;
-  font-size: 22px;
-  font-weight: bold;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .footer {
-  height: 400px;
-  background: $accent-dark;
+    height: 360px;
+    background: $accent-dark;
+    margin-top: 80px;
 }
