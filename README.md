@@ -2,6 +2,8 @@
 
 Welcome to the PayCertify music store, where you can browse the top 100 albums on the iTunes charts!
 
+![Image description](http://bennettsportfolio.com/projects/itunes-grab-1.png)
+
 See it live here: http://bennettsportfolio.com/projects/itunes100/
 
 ### Features
