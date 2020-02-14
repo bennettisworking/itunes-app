@@ -35,7 +35,7 @@ class ItunesChart extends Component {
                 <div key={index} className="itunesChart__entry col-6 col-lg-4 col-md-6 col-sm-6 col-xs-6 row ml-0 mr-0">
   					<div className="itunesChart__entry__image-col col-12 col-lg-5 col-md-5 col-sm-5">
   						<div className="itunesChart__entry__image" style ={{ backgroundImage: "url('"+imgurl.label+"')" }}>
-  							<div className="itunesChart__entry__bullet">{index + 1}</div>
+  							<div className="itunesChart__entry__bullet" style={{display: this.state.searchInput!==''?'none' : 'block'}}>{index + 1}</div>
   						</div>
   					</div>
   					<div className="itunesChart__entry__text col-12 col-lg-7 col-md-7 col-sm-7">
@@ -91,7 +91,8 @@ class ItunesChart extends Component {
   			<div className="col-12 col-sm-7 col-md-4 col-lg-6 text-sm-left text-md-center">
   				<h4 className="itunesChart__title">The iTunes Hot 100 Albums</h4>
   			</div> 
-  			<div className="col-12 order-first order-sm-last col-sm-5 col-md-4 col-lg-3 text-center text-sm-right text-md-right">
+  			<div className="itunesChart__search-div col-12 order-first order-sm-last col-sm-5 col-md-4 col-lg-3 text-center text-sm-right text-md-right">
+  				<i className="fas fa-search"></i>
   				<input className="itunesChart__search" type="text" placeholder="Search artists and titles"
   				onChange={this.searchAlbums.bind(this)} value={searchText}/>
   			</div>
