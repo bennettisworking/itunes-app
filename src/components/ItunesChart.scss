@@ -6,7 +6,7 @@
 }
 
 .itunesChart__entry {
-    height: 140px;
+    min-height: 140px;
     position: relative;
     margin-bottom: 25px;
     transition: .4s;
@@ -28,14 +28,14 @@
 .itunesChart__entry:first-child {
     flex: 0 0 100%;
     max-width: 100%;
-    height: 220px;
+    min-height: 220px;
 }
 
 .itunesChart__entry__image {
     border-radius: 4px;
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 95%
+    width: 100%
 }
 
 .itunesChart__entry__image:after {
@@ -46,7 +46,7 @@
 
 .itunesChart__entry:first-child .itunesChart__entry__image {
     max-height: 210px;
-    background-position: center center;
+    background-position: bottom center;
 }
 
 .itunesChart__entry__image-col {
@@ -57,7 +57,7 @@
     font-family: $serif-font;
     font-size: 13px;
     text-align: left;
-    line-height: 1.3;
+    line-height: 1.2;
     padding: 0 3px 0 10px;
 }
 
@@ -65,22 +65,11 @@
     font-family: $sans-font;
     font-weight: bold;
     font-size: 15px;
+    line-height: 1.1;
 }
 
-@media only screen and (min-width: 992px) {
-    .itunesChart__entry:first-child .itunesChart__entry__text {
-        font-size: 15px;
-    }
-
-    .itunesChart__entry:first-child .itunesChart__entry__title {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    .itunesChart__entry__title {
-        font-size: 13px;
-    }
+.itunesChart__entry:first-child .itunesChart__entry__title {
+	font-size: 18px;
 }
 
 .itunesChart__entry__bullet {
@@ -97,9 +86,17 @@
     font-size: 14px;
 }
 
+.itunesChart__entry__price{
+	font-weight: bold;
+	color: #0bf;
+	font-family: $sans-font;
+	margin-top: 4px;
+	font-size: 12px;
+}
+
 .itunesChart__entry__buy {
     position: absolute;
-    bottom: 4px;
+    bottom: 0;
     border: 1px solid #666;
     color: #666;
 }
@@ -131,4 +128,27 @@
     box-shadow: none;
     width: 75%;
     padding: 2px 4px;
+}
+
+@media only screen and (max-width: 575px) {
+	.itunesChart__entry {
+		height: auto;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+
+	.itunesChart__entry__text {
+		padding: 0;
+		font-size: 12px;
+	}
+
+	.itunesChart__entry__title {
+        font-size: 14px;
+        margin: 10px 0 4px 0;
+    }
+
+    .itunesChart__entry__buy {
+    	position: static;
+    	margin-top: 6px;
+    }
 }

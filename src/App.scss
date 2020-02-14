@@ -75,8 +75,18 @@
 
 .page-header__heading {
     margin: 0;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.page-header__logo {
+  height: 18px;
+}
+
+.page-header__logo--big {
+  height: 26px;
+  margin-top: -1px;
+  vertical-align: text-bottom;
 }
 
 .footer {

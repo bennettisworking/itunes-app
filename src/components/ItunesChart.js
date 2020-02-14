@@ -33,14 +33,15 @@ class ItunesChart extends Component {
             let imgurl = album['im:image'][2];
             displaylist.push(
                 <div key={index} className="itunesChart__entry col-6 col-lg-4 col-md-6 col-sm-6 col-xs-6 row ml-0 mr-0">
-  					<div className="itunesChart__entry__image-col col-6 col-lg-5 col-md-5">
+  					<div className="itunesChart__entry__image-col col-12 col-lg-5 col-md-5 col-sm-5">
   						<div className="itunesChart__entry__image" style ={{ backgroundImage: "url('"+imgurl.label+"')" }}>
   							<div className="itunesChart__entry__bullet">{index + 1}</div>
   						</div>
   					</div>
-  					<div className="itunesChart__entry__text col-6 col-lg-7 col-md-7">
-  						<h4 className="itunesChart__entry__title">{album['im:name'].label}</h4>
+  					<div className="itunesChart__entry__text col-12 col-lg-7 col-md-7 col-sm-7">
+  						<h4 className="itunesChart__entry__title">{this.truncate(album['im:name'].label)}</h4>
   						<div>{album['im:artist'].label}</div>
+  						<div className="itunesChart__entry__price">{album['im:price'].label}</div>
   						<button key={index} onClick={this.linkOut.bind(this, album.link.attributes.href)} className="itunesChart__entry__buy btn btn-success btn-tny">Buy Now</button>
   					</div>
   				</div>
@@ -48,6 +49,10 @@ class ItunesChart extends Component {
         });
         return displaylist;
     }
+
+    truncate(st) {
+    	return st.length > 60 ? st.substring(0, 58) + "..." : st;
+	}
 
     linkOut(url) {
     	window.open(url);

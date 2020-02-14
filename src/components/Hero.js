@@ -21,10 +21,10 @@ class Hero extends Component {
                 <div className="hero">
 				<div className="hero__inset" style ={{ backgroundImage: "url('" + bg + "')" }}></div>
 				<div className="hero__content row">
-					<div className="hero__album-cover-col col-lg-5 col-md-5 col-sm-5">
+					<div className="hero__album-cover-col col-6 col-lg-5 col-md-5 col-sm-5 text-center text-sm-left">
 						<div className="hero__album-cover" style ={{ backgroundImage: "url('" + bg + "')", top: this.state.coverTop + "px" }}></div>
 					</div>
-					<div className="hero__text col-lg-7 col-md-7 col-sm-7" style={{opacity: this.state.textOpacity}}>
+					<div className="hero__text col-6 col-lg-7 col-md-7 col-sm-7" style={{opacity: this.state.textOpacity}}>
 						<div className="hero__pick">FEATURED</div><br/>
 						<div className="hero__title">{album['im:name'].label}</div><br/>
 						<div className="hero__artist">{album['im:artist'].label}</div>

@@ -84,3 +84,38 @@
     top: -800px;
     transition: .8s;
 }
+
+@media only screen and (max-width: 640px) {
+	.hero__album-cover {
+    	height: 220px;
+    	width: 220px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+	.hero__album-cover {
+    	height: 200px;
+    	width: 200px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+	.hero__album-cover {
+    	height: 180px;
+    	width: 180px;
+    }
+    .hero__title {
+	    font-family: $serif-font;
+	    font-weight: bold;
+	    font-size: 21px;
+	}
+	.hero__pick {
+	    margin: 0 0 15px;
+	}
+	.hero__text {
+	    font-size: 14px;
+	}
+	.hero {
+	    height: 250px;
+	}
+}
