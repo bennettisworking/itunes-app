@@ -25,6 +25,7 @@ function App() {
                  </svg>
                 Music</h1>
           </div>
+          <div className="col-2"></div>
           </header>
           <ItunesChart/>
           <footer className="footer">

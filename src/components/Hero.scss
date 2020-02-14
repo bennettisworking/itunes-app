@@ -3,9 +3,17 @@
 .hero {
     width: 100%;
     height: 300px;
-    margin-bottom: 30px;
+    overflow: hidden;
+    position: absolute;
+    transition: .6s;
+}
+
+.hero__frame {
+	width: 100%;
+    height: 300px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .hero__inset {
@@ -56,7 +64,7 @@
     padding: 0 10px;
 }
 
-.hero__buynow {
+.hero__buynow.btn {
     display: block;
     margin: 20px 0 0 0;
     border: 1px white solid;
@@ -97,17 +105,22 @@
     	height: 200px;
     	width: 200px;
     }
+    .hero__title {
+	    font-family: $serif-font;
+	    font-weight: bold;
+	    font-size: 24px;
+	}
 }
 
 @media only screen and (max-width: 380px) {
 	.hero__album-cover {
-    	height: 180px;
-    	width: 180px;
+    	height: 170px;
+    	width: 170px;
     }
     .hero__title {
 	    font-family: $serif-font;
 	    font-weight: bold;
-	    font-size: 21px;
+	    font-size: 20px;
 	}
 	.hero__pick {
 	    margin: 0 0 15px;
@@ -115,7 +128,7 @@
 	.hero__text {
 	    font-size: 14px;
 	}
-	.hero {
+	.hero__frame {
 	    height: 250px;
 	}
 }

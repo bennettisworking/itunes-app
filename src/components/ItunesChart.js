@@ -73,8 +73,8 @@ class ItunesChart extends Component {
 
     setHero() {
         let ids = [];
-        for (let a = 0; a < 1; a++) {
-            ids.push(this.state.albums[Math.floor(Math.random() * 100)]); //change to count because not always 100 records
+        for (let a = 0; a < 2; a++) {
+            ids.push(this.state.albums[Math.floor(Math.random() * 98)]); //change to count because not always 100 records
         }
         this.setState({ hero_albums: ids });
     }
@@ -88,10 +88,10 @@ class ItunesChart extends Component {
   		<div className="itunesChart container">
   		<div className="itunesChart__header row">
   			<div className="col-0 col-sm-0 col-md-4 col-lg-3"></div>
-  			<div className="col-12 col-sm-6 col-md-4 col-lg-6 text-sm-left text-md-center">
+  			<div className="col-12 col-sm-7 col-md-4 col-lg-6 text-sm-left text-md-center">
   				<h4 className="itunesChart__title">The iTunes Hot 100 Albums</h4>
-  			</div>
-  			<div className="col-12 col-sm-6 col-md-4 col-lg-3 text-center text-sm-right text-md-right">
+  			</div> 
+  			<div className="col-12 order-first order-sm-last col-sm-5 col-md-4 col-lg-3 text-center text-sm-right text-md-right">
   				<input className="itunesChart__search" type="text" placeholder="Search artists and titles"
   				onChange={this.searchAlbums.bind(this)} value={searchText}/>
   			</div>
